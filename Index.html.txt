@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>P B and B Pty Ltd – SDA Provider | Investor Microsite</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="P B and B Pty Ltd – Registered NDIS SDA Provider. Investor-focused overview of our SDA housing model, market opportunity, and investment proposition." />
+  <style>
+    :root {
+      --navy: #0A1A2F;
+      --teal: #1C7C8C;
+      --green: #2BB673;
+      --light-grey: #f4f5f7;
+      --mid-grey: #e0e3e8;
+      --text-main: #1b2430;
+      --warning: #f2994a;
+      --danger: #e74c3c;
+      --white: #ffffff;
+      --max-width: 1100px;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body {
+      background: #f7f8fb;
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+    a {
+      color: var(--teal);
+      text-decoration: none;
+    }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(10, 26, 47, 0.97);
+      backdrop-filter: blur(10px);
+      color: var(--white);
+    }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 1.25rem;
+    }
+    .nav-logo {
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-size: 0.95rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav-links a {
+      font-size: 0.8rem;
+      color: #d7e3ff;
+      padding: 0.25rem 0.5rem;
+      border-radius: 3px;
+    }
+    .nav-links a:hover {
+      background: rgba(255, 255, 255, 0.06);
+    }
+    .hero {
+      background: radial-gradient(circle at top left, #17345a, #050b13);
+      color: var(--white);
+      padding: 3.5rem 1.25rem 3rem;
+    }
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .hero-title {
+      font-size: 2.2rem;
+      font-weight: 800;
+      margin-bottom: 0.6rem;
+    }
+    .hero-subtitle {
+      color: #72d3df;
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
+    }
+    .hero-body {
+      max-width: 420px;
+      font-size: 0.95rem;
+      color: #e0ecff;
+      margin-bottom: 1.5rem;
+    }
+    .hero-meta {
+      font-size: 0.8rem;
+      color: #c4d3ff;
+    }
+    .hero-meta span {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    .hero-cta {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--teal);
+      color: var(--white);
+      border-radius: 999px;
+      padding: 0.55rem 1.4rem;
+      border: none;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .btn-secondary {
+      background: transparent;
+      border-radius: 999px;
+      padding: 0.55rem 1.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.45);
+      color: #e5edff;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .hero-card {
+      background: rgba(5, 14, 30, 0.9);
+      border-radius: 10px;
+      border: 1px solid rgba(124, 178, 255, 0.3);
+      padding: 1.3rem 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='rgba(255,255,255,0.03)' d='M0 10h20v2H0zm40 40h20v2H40zm40-30h20v2H80zm40 50h20v2h-20zM20 80h20v2H20z'/%3E%3C/svg%3E");
+      opacity: 0.7;
+      pointer-events: none;
+    }
+    .hero-card h3 {
+      font-size: 0.9rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #9ac6ff;
+      margin-bottom: 0.75rem;
+    }
+    .hero-card-main {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .hero-card-tagline {
+      font-size: 0.82rem;
+      color: #d1e4ff;
+      margin-bottom: 0.9rem;
+    }
+    .hero-card-list {
+      list-style: none;
+      font-size: 0.8rem;
+      color: #d1e4ff;
+      display: grid;
+      gap: 0.25rem;
+    }
+    .hero-card-list li::before {
+      content: "•";
+      color: var(--green);
+      margin-right: 0.3rem;
+    }
+    .section {
+      padding: 2.5rem 1.25rem;
+    }
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    .section-header {
+      margin-bottom: 1.2rem;
+    }
+    .section-kicker {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--teal);
+      margin-bottom: 0.3rem;
+    }
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #4e5a6c;
+      max-width: 520px;
+    }
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+      gap: 2rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 8px;
+      border: 1px solid var(--mid-grey);
+      padding: 1.3rem 1.4rem;
+    }
+    .card-soft {
+      background: var(--light-grey);
+      border: 1px solid #d4d9e1;
+    }
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+    }
+    .highlight-number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--green);
+      margin-bottom: 0.3rem;
+    }
+    .highlight-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6b778a;
+    }
+    ul {
+      padding-left: 1.1rem;
+      font-size: 0.9rem;
+    }
+    ul li {
+      margin-bottom: 0.35rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: #e8f7f9;
+      color: var(--teal);
+      margin-right: 0.3rem;
+      margin-bottom: 0.2rem;
+    }
+    .problems {
+      background: #111827;
+      color: var(--white);
+    }
+    .problems .card {
+      background: #1f2937;
+      border-color: #374151;
+    }
+    .problem-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+    .problem-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--danger);
+    }
+    .three-column {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      padding: 0.15rem 0.45rem;
+      border-radius: 999px;
+      background: #e5f7ef;
+      color: var(--green);
+      margin-bottom: 0.4rem;
+    }
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .grid-4 .card {
+      padding: 1rem 1rem;
+      text-align: left;
+    }
+    .grid-4-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .grid-4-text {
+      font-size: 0.8rem;
+      color: #4e5a6c;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+      margin-top: 0.3rem;
+    }
+    th, td {
+      padding: 0.45rem 0.4rem;
+      border-bottom: 1px solid #dde2eb;
+      text-align: left;
+    }
+    th {
+      font-weight: 600;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b778a;
+      background: #f2f4f8;
+    }
+    .table-note {
+      font-size: 0.78rem;
+      color: #6b778a;
+      margin-top: 0.4rem;
+    }
+    .timeline {
+      border-left: 2px solid var(--mid-grey);
+      padding-left: 1rem;
+      margin-top: 0.6rem;
+    }
+    .timeline-step {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+    .timeline-step::before {
+      content: "";
+      position: absolute;
+      left: -1.24rem;
+      top: 0.25rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--teal);
+    }
+    .timeline-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--teal);
+      margin-bottom: 0.15rem;
+    }
+    .timeline-body {
+      font-size: 0.86rem;
+    }
+    .founder {
+      display: grid;
+      grid-template-columns: 160px minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+    .founder-photo {
+      width: 140px;
+      height: 140px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #1c7c8c, #2bb673);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+    .founder-meta {
+      font-size: 0.8rem;
+      color: #6b778a;
+      margin-bottom: 0.5rem;
+    }
+    .contact-section {
+      background: #050b13;
+      color: var(--white);
+      text-align: center;
+      padding: 2.8rem 1.25rem 2.6rem;
+    }
+    .contact-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .contact-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+    .contact-text {
+      font-size: 0.95rem;
+      color: #d0ddff;
+      margin-bottom: 1.6rem;
+    }
+    .contact-details {
+      font-size: 0.9rem;
+      color: #e2ebff;
+      margin-bottom: 1.4rem;
+    }
+    .contact-details div {
+      margin-bottom: 0.25rem;
+    }
+    .contact-cta {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    footer {
+      background: #02050a;
+      color: #6b7385;
+      font-size: 0.75rem;
+      padding: 0.8rem 1.25rem;
+      text-align: center;
+    }
+    @media (max-width: 800px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .three-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .founder {
+        grid-template-columns: minmax(0, 1fr);
+        text-align: left;
+      }
+      header {
+        position: static;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.4rem;
+      }
+      .nav-links {
+        justify-content: flex-start;
+      }
+    }
+    @media (max-width: 500px) {
+      .grid-4 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-title {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="nav-logo">P B and B Pty Ltd – SDA</div>
+    <nav class="nav-links">
+      <a href="#summary">Summary</a>
+      <a href="#opportunity">SDA Opportunity</a>
+      <a href="#solution">Solution</a>
+      <a href="#model">Model</a>
+      <a href="#financials">Financials</a>
+      <a href="#founder">Founder</a>
+      <a href="#investment">Investment</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-title">P B and B Pty Ltd</div>
+      <div class="hero-subtitle">Registered NDIS SDA Provider</div>
+      <p class="hero-body">
+        Delivering high‑quality, compliant Specialist Disability Accommodation (SDA) housing across Australia – creating long‑term value for participants and investors in a government‑backed sector.
+      </p>
+      <div class="hero-meta">
+        <span>Founder: Kumaran</span>
+        <span>NDIS SDA Registration: Aug 2025 – Aug 2028</span>
+      </div>
+      <div class="hero-cta">
+        <button class="btn-primary" onclick="document.getElementById('investment').scrollIntoView({behavior:'smooth'})">
+          View Investment Opportunity
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('summary').scrollIntoView({behavior:'smooth'})">
+          Explore Overview
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h3>SDA Housing Investment Snapshot</h3>
+      <div class="hero-card-main">$150K–$300K per SDA home (annual potential)</div>
+      <div class="hero-card-tagline">
+        Government‑backed SDA payments, high‑demand market, scalable, low‑overhead operating model.
+      </div>
+      <ul class="hero-card-list">
+        <li>Registered SDA Provider ready for immediate operation</li>
+        <li>Revenue from management fees, placement fees, and advisory</li>
+        <li>Scalable across Australian states with a cloud‑based model</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="summary">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Executive Summary</div>
+      <h2 class="section-title">Specialist Disability Accommodation, Investor‑Ready</h2>
+      <p class="section-subtitle">
+        P B and B Pty Ltd is a fully registered SDA provider built on governance, compliance, and low‑overhead operations, positioned to scale nationally.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-title">What We Do</div>
+        <ul>
+          <li>Operate as a fully registered SDA provider, ready for immediate operation.</li>
+          <li>Manage SDA properties, participant placement, and tenancy.</li>
+          <li>Provide compliance‑driven reporting and advisory services.</li>
+          <li>Scale SDA operations across multiple Australian states.</li>
+        </ul>
+      </div>
+      <div class="card card-soft">
+        <div class="card-title">Why It Matters</div>
+        <ul>
+          <li>Participants face a shortage of suitable SDA housing nationwide.</li>
+          <li>Government‑backed SDA payments provide long‑term revenue stability.</li>
+          <li>Investors seek trusted, compliant operators to manage SDA assets.</li>
+          <li>Our low‑overhead, home‑based model enables strong margins from day one.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="opportunity">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">SDA Market</div>
+      <h2 class="section-title">The SDA Opportunity</h2>
+      <p class="section-subtitle">
+        SDA supports NDIS participants with extreme functional impairment by funding purpose‑built housing with long‑term, government‑backed payments.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-title">Demand & Returns</div>
+        <ul>
+          <li>SDA supports participants with extreme functional impairment and high support needs.</li>
+          <li>Demand for SDA housing significantly exceeds supply across Australia.</li>
+          <li>SDA payments to providers are government‑backed and long‑term.</li>
+          <li>Annual SDA payments per participant typically range from $40K to $120K.</li>
+          <li>A single SDA home can generate approximately $150K–$300K in annual revenue (depending on design and occupancy).</li>
+        </ul>
+      </div>
+      <div class="card card-soft">
+        <div class="highlight-number">$150K–$300K</div>
+        <div class="highlight-label">Estimated annual revenue per SDA home</div>
+        <p style="margin-top:0.6rem;font-size:0.86rem;">
+          Investors are actively seeking SDA exposure, but many lack a trusted, compliant provider to manage properties, tenants, and reporting.
+        </p>
+        <p style="margin-top:0.6rem;font-size:0.8rem;color:#6b778a;">
+          Visualisation idea: simple bar graphic showing SDA housing demand vs current supply, highlighting the gap.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section problems" id="problems">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Market Gaps</div>
+      <h2 class="section-title">Current Market Problems</h2>
+      <p class="section-subtitle" style="color:#d1d5db;">
+        Despite strong funding and clear need, SDA outcomes are constrained by execution, governance, and operational gaps.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="problem-tag"><span class="problem-dot"></span>Investor Challenges</div>
+        <ul>
+          <li>Investors struggle to identify reliable, compliant SDA providers.</li>
+          <li>Many SDA homes remain vacant due to weak placement and referral channels.</li>
+          <li>Limited transparency on occupancy, compliance status, and risk.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="problem-tag"><span class="problem-dot" style="background:var(--warning);"></span>Participant & Provider Challenges</div>
+        <ul>
+          <li>Support coordinators lack a consistent pipeline of quality SDA housing options.</li>
+          <li>Participants face long wait times for suitable accommodation.</li>
+          <li>Some providers fail audits because of poor governance and weak operating models.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="solution">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Our Solution</div>
+      <h2 class="section-title">Connecting Investors, Participants, and Support Coordinators</h2>
+      <p class="section-subtitle">
+        P B and B Pty Ltd operates as the governance‑led SDA provider at the centre of the ecosystem, aligning outcomes for investors and participants.
+      </p>
+    </div>
+    <div class="three-column">
+      <div class="card">
+        <span class="badge">For Investors</span>
+        <ul>
+          <li>SDA registration and compliance framework.</li>
+          <li>End‑to‑end property and tenancy management.</li>
+          <li>Participant placement to drive high occupancy.</li>
+          <li>Transparent reporting and audit‑ready governance.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">For Participants</span>
+        <ul>
+          <li>Safe, compliant SDA housing with appropriate design category.</li>
+          <li>Smooth onboarding and transition into the property.</li>
+          <li>Focus on long‑term stability and participant outcomes.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="badge">For Support Coordinators</span>
+        <ul>
+          <li>Fast, predictable placement in suitable SDA homes.</li>
+          <li>Clear communication and single point of contact.</li>
+          <li>Reliable housing options across multiple regions.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="model">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Business Model</div>
+      <h2 class="section-title">Business & Operating Model</h2>
+      <p class="section-subtitle">
+        A lean, home‑based operating model underpinned by governance, cloud‑based tooling, and scalable national reach.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-title">Revenue Streams</div>
+        <ul>
+          <li>10% SDA management fee on eligible rental income.</li>
+          <li>Participant placement fees to fill vacancies efficiently.</li>
+          <li>Compliance and governance advisory for SDA stakeholders.</li>
+          <li>Future SDA property ownership to capture asset‑linked upside.</li>
+        </ul>
+      </div>
+      <div class="card card-soft">
+        <div class="card-title">Operating Model</div>
+        <ul>
+          <li>Home‑based, low‑overhead structure.</li>
+          <li>Cloud‑based systems and digital reporting.</li>
+          <li>National scalability across Australian states.</li>
+          <li>Designed for auditability, compliance, and resilience.</li>
+        </ul>
+        <p style="margin-top:0.6rem;font-size:0.8rem;color:#6b778a;">
+          Visualisation idea: circular diagram with “SDA Provider” at the centre, surrounded by Management Fees, Placement Fees, Advisory, and SDA Ownership.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="financials">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Financial Projection</div>
+      <h2 class="section-title">Three‑Year Projection (Illustrative)</h2>
+      <p class="section-subtitle">
+        A staged ramp‑up in managed properties drives management fee revenue and profit, with upside from potential SDA ownership.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-title">Base Case (Managed SDA Properties)</div>
+        <table>
+          <thead>
+            <tr>
+              <th>Year</th>
+              <th>Properties</th>
+              <th>Revenue (approx.)</th>
+              <th>Profit (approx.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Year 1</td>
+              <td>2</td>
+              <td>$24K</td>
+              <td>$16K</td>
+            </tr>
+            <tr>
+              <td>Year 2</td>
+              <td>6</td>
+              <td>$72K</td>
+              <td>$60K</td>
+            </tr>
+            <tr>
+              <td>Year 3</td>
+              <td>12</td>
+              <td>$144K</td>
+              <td>$124K</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">
+          Figures are indicative and based on a management‑fee‑only model; actual results depend on occupancy, fee structures, and property mix.
+        </p>
+      </div>
+      <div class="card card-soft">
+        <div class="card-title">Upside Scenario</div>
+        <ul>
+          <li>Owning even a single SDA property can add an estimated $120K–$200K in additional annual profit, depending on category and occupancy.</li>
+          <li>Layering asset ownership on top of fee income creates a blended yield profile for investors.</li>
+          <li>Visualisation idea: simple line chart showing revenue vs profit over three years, with an “ownership” uplift line.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="why-we-win">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Competitive Edge</div>
+      <h2 class="section-title">Why We Win</h2>
+      <p class="section-subtitle">
+        Governance, relationships, and a low‑overhead structure differentiate P B and B Pty Ltd in a capacity‑constrained SDA market.
+      </p>
+    </div>
+    <div class="grid-4">
+      <div class="card">
+        <div class="grid-4-label">Governance & Compliance</div>
+        <div class="grid-4-text">
+          Strong background in risk, regulatory compliance, and audit‑ready operations ensures reliable SDA provider performance.
+        </div>
+      </div>
+      <div class="card">
+        <div class="grid-4-label">Low‑Overhead Model</div>
+        <div class="grid-4-text">
+          Home‑based, cloud‑enabled operations keep fixed costs low and margins resilient as the portfolio scales.
+        </div>
+      </div>
+      <div class="card">
+        <div class="grid-4-label">Industry Relationships</div>
+        <div class="grid-4-text">
+          Relationships with support coordinators, SILs, developers, and OTs support steady referral flow and informed property selection.
+        </div>
+      </div>
+      <div class="card">
+        <div class="grid-4-label">High‑Demand Market</div>
+        <div class="grid-4-text">
+          SDA demand continues to exceed supply nationally, creating enduring need for quality providers with scalable models.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="founder">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Founder</div>
+      <h2 class="section-title">Meet the Founder – Kumaran</h2>
+      <p class="section-subtitle">
+        An experienced transformation and governance leader bringing enterprise‑grade risk, compliance, and delivery capability into SDA.
+      </p>
+    </div>
+    <div class="founder card card-soft">
+      <div class="founder-photo">
+        K
+      </div>
+      <div>
+        <div class="founder-meta">Founder & Director, P B and B Pty Ltd</div>
+        <ul>
+          <li>Associate Director at Macquarie Group with a track record in multi‑million‑dollar transformation programs.</li>
+          <li>Deep expertise in governance, risk, operations, and regulatory compliance in highly regulated environments.</li>
+          <li>Proven delivery across technology, operations, and regulatory change in banking and financial services.</li>
+          <li>Strong stakeholder management and relationship‑building with senior executives and cross‑functional teams.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="gtm">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Go‑To‑Market</div>
+      <h2 class="section-title">Go‑To‑Market Strategy</h2>
+      <p class="section-subtitle">
+        A phased rollout focused on partnerships, referrals, and disciplined scaling of managed properties and services.
+      </p>
+    </div>
+    <div class="card">
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-label">Phase 1 — Months 1–6</div>
+          <div class="timeline-body">
+            Build partnerships with SDA developers, engage support coordinators (SCs) and SILs, and launch digital presence with live vacancy listings.
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-label">Phase 2 — Months 6–18</div>
+          <div class="timeline-body">
+            Manage 4–6 properties, deepen referral networks, and expand participant placement services as a core offering.
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-label">Phase 3 — Months 18–36</div>
+          <div class="timeline-body">
+            Grow to 10–12 managed properties, expand interstate, and acquire or build the first SDA property to capture asset‑linked returns.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="investment">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Investment Ask</div>
+      <h2 class="section-title">Investment Opportunity</h2>
+      <p class="section-subtitle">
+        Optional capital raise to accelerate marketing, operations, and SDA property ownership while sharing long‑term recurring revenue.
+      </p>
+    </div>
+    <div class="two-column">
+      <div class="card">
+        <div class="card-title">Funding Sought</div>
+        <ul>
+          <li>Seeking: $50K–$150K (flexible based on investor profile and structure).</li>
+        </ul>
+        <div class="card-title" style="margin-top:0.9rem;">Use of Funds</div>
+        <ul>
+          <li>Marketing and participant acquisition campaigns.</li>
+          <li>Part‑time administrative support to underpin scaling.</li>
+          <li>Interstate expansion and local referral building.</li>
+          <li>Co‑funding the first SDA property to capture equity upside.</li>
+        </ul>
+      </div>
+      <div class="card card-soft">
+        <div class="card-title">Investor Returns</div>
+        <ul>
+          <li>Equity participation in the SDA operating entity and/or specific assets.</li>
+          <li>Profit share from management and advisory activities.</li>
+          <li>Exposure to long‑term recurring revenue in a government‑backed sector.</li>
+        </ul>
+        <p style="margin-top:0.7rem;font-size:0.86rem;">
+          Structures can be tailored (e.g., equity, revenue share, or a blend) depending on investor preferences and time horizon.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-title">Let’s Build the Future of SDA Housing</div>
+    <p class="contact-text">
+      P B and B Pty Ltd is ready to scale in one of Australia’s most secure, high‑growth, government‑backed sectors.
+      Partner with us to deliver high‑quality SDA housing and long‑term value for participants and investors.
+    </p>
+    <div class="contact-details">
+      <div><strong>Contact:</strong> Kumaran</div>
+      <div><strong>Phone:</strong> [Phone]</div>
+      <div><strong>Email:</strong> [Email]</div>
+    </div>
+    <div class="contact-cta">
+      <button class="btn-primary" onclick="window.location.href='mailto:[Email]?subject=Investor%20Enquiry%20-%20P%20B%20and%20B%20Pty%20Ltd';">
+        Email About Investment
+      </button>
+      <button class="btn-secondary" onclick="document.getElementById('summary').scrollIntoView({behavior:'smooth'})">
+        Review Overview Again
+      </button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; P B and B Pty Ltd – NDIS SDA Provider. All rights reserved.
+</footer>
+
+</body>
+</html>
